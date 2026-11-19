@@ -1,61 +1,53 @@
 
 import React, { useState } from "react";
-import "./style.css";
-
-import NurseDashboard from "./pages/NurseDashboard";
-import VaccinationSchedules from "./pages/VaccinationSchedules";
-import PrenatalSchedules from "./pages/PrenatalSchedules";
-import FourPsSchedules from "./pages/FourPsSchedules";
-import MedicineInventory from "./pages/MedicineInventory";
-import MedicineAdministration from "./pages/MedicineAdministration";
+import NurseDashboard from "./NurseDashboard.jsx";
+import ReportAndAnalytics from "./ReportAndAnalytics.jsx";
+import "./App.css";
 
 function App() {
   const [activePage, setActivePage] = useState("dashboard");
 
-  const navigation = [
-    { id: "dashboard", label: "Nurse Dashboard" },
-    { id: "vaccination", label: "Children's Vaccination Schedules" },
-    { id: "prenatal", label: "Prenatal Checkup Schedules" },
-    { id: "fourps", label: "4Ps Beneficiaries' Checkup Schedules" },
-    { id: "inventory", label: "Medicine Inventory" },
-    { id: "administration", label: "Medicine Administration Records" }
-  ];
-
-  const pages = {
-    dashboard: <NurseDashboard />,
-    vaccination: <VaccinationSchedules />,
-    prenatal: <PrenatalSchedules />,
-    fourps: <FourPsSchedules />,
-    inventory: <MedicineInventory />,
-    administration: <MedicineAdministration />
-  };
-
   return (
-    <div className="app-layout">
-      <aside className="sidebar">
-        <div className="sidebar-brand">
-          <h2>e-BHW</h2>
-          <p>Nurse Management System</p>
+    <div className="app-container">
+      <header className="app-header">
+        <div className="header-content">
+          <div className="header-logo">+</div>
+
+          <div className="header-text">
+            <h1>e-BHW Health Information System</h1>
+            <p>Barangay Health Management System</p>
+          </div>
         </div>
 
-        <nav className="sidebar-menu">
-          {navigation.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              className={`sidebar-link ${
-                activePage === item.id ? "active" : ""
-              }`}
-              onClick={() => setActivePage(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
-      </aside>
+        <nav className="app-navigation">
+          <button
+            className={
+              activePage === "dashboard"
+                ? "nav-button active"
+                : "nav-button"
+            }
+            onClick={() => setActivePage("dashboard")}
+          >
+            Nurse Dashboard
+          </button>
 
-      <main className="app-content">
-        {pages[activePage]}
+          <button
+            className={
+              activePage === "analytics"
+                ? "nav-button active"
+                : "nav-button"
+            }
+            onClick={() => setActivePage("analytics")}
+          >
+            Reports & Analytics
+          </button>
+        </nav>
+      </header>
+
+      <main className="app-main">
+        {activePage === "dashboard" && <NurseDashboard />}
+
+        {activePage === "analytics" && <ReportAndAnalytics />}
       </main>
     </div>
   );
