@@ -1,0 +1,245 @@
+.vaccination-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f3f8ff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #173b57;
+}
+
+.vaccination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.vaccination-header h1 {
+    font-size: 30px;
+    color: #164e75;
+    margin: 0 0 8px;
+}
+
+.vaccination-header p {
+    color: #64748b;
+    margin: 0;
+}
+
+.add-schedule-btn,
+.save-schedule-btn {
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    color: white;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-schedule-btn,
+.clear-filter-btn {
+    background: #e5eff9;
+    color: #245475;
+    border: 0;
+    padding: 12px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.edit-schedule-btn {
+    background: #dbeafe;
+    color: #1d4ed8;
+    border: 0;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.vaccination-page button:hover {
+    filter: brightness(0.95);
+}
+
+.vaccination-filter-section,
+.vaccination-table-container {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e0edfa;
+    border-radius: 14px;
+    margin-bottom: 22px;
+}
+
+.vaccination-filter-section {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.vaccination-filter-section input {
+    padding: 12px;
+    border: 1px solid #cbdff0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.vaccination-filter-section input:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.vaccination-table-container h2 {
+    font-size: 22px;
+    color: #164e75;
+    margin: 0 0 20px;
+}
+
+.vaccination-table-wrapper {
+    overflow-x: auto;
+}
+
+.vaccination-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.vaccination-table th,
+.vaccination-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.vaccination-table th {
+    background: #edf6ff;
+    color: #164e75;
+}
+
+.schedule-status-select {
+    padding: 8px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    cursor: pointer;
+}
+
+.vaccination-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(15, 35, 60, 0.45);
+}
+
+.vaccination-modal,
+.status-confirmation-modal {
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 28px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px #0002;
+}
+
+.status-confirmation-modal {
+    max-width: 430px;
+}
+
+.vaccination-modal h2,
+.status-confirmation-modal h2 {
+    font-size: 23px;
+    color: #164e75;
+    margin: 0 0 22px;
+}
+
+.vaccination-modal form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.vaccination-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.vaccination-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.vaccination-field input,
+.vaccination-field select,
+.vaccination-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #cbdff0;
+    border-radius: 9px;
+    background: #f8fbff;
+    font: inherit;
+    font-size: 14px;
+}
+
+.vaccination-field input:focus,
+.vaccination-field textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.vaccination-form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.success-message,
+.error-message {
+    padding: 13px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.empty-schedule {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+@media (max-width: 650px) {
+    .vaccination-page {
+        padding: 16px;
+    }
+    .vaccination-header,
+    .vaccination-filter-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .vaccination-modal form {
+        grid-template-columns: 1fr;
+    }
+    .vaccination-modal {
+        padding: 20px;
+    }
+}

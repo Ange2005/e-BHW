@@ -1,0 +1,322 @@
+.prenatal-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.prenatal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.prenatal-header h1 {
+    color: #173b57;
+    margin-bottom: 10px;
+}
+
+.prenatal-header p {
+    color: #64748b;
+}
+
+.prenatal-add-btn,
+.prenatal-save-btn {
+    background: #168b78;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.prenatal-add-btn:hover,
+.prenatal-save-btn:hover {
+    background: #116e60;
+}
+
+.prenatal-table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.prenatal-table-container h2 {
+    color: #173b57;
+    margin-bottom: 20px;
+}
+
+.prenatal-table-wrapper {
+    overflow-x: auto;
+}
+
+.prenatal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.prenatal-table th,
+.prenatal-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.prenatal-table th {
+    background: #eef6f5;
+    color: #173b57;
+}
+
+.prenatal-status {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.prenatal-edit-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.prenatal-edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.prenatal-success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.prenatal-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.prenatal-empty {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+.prenatal-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.prenatal-modal {
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.prenatal-modal h2 {
+    color: #173b57;
+    margin-bottom: 20px;
+}
+
+.prenatal-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prenatal-modal label {
+    color: #334155;
+    font-weight: 600;
+}
+
+.prenatal-modal input,
+.prenatal-modal select,
+.prenatal-modal textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.prenatal-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.prenatal-cancel-btn {
+    background: #e2e8f0;
+    color: #334155;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .prenatal-page {
+        padding: 15px;
+    }
+    .prenatal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .prenatal-modal {
+        padding: 20px;
+    }
+}
+
+
+/* 1.3.2 SEARCH AND FILTER */
+
+.prenatal-filter-section {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+.prenatal-filter-section input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.prenatal-clear-filter {
+    padding: 12px 18px;
+    background: #64748b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.prenatal-clear-filter:hover {
+    background: #475569;
+}
+
+
+/* STATUS CONTROL */
+
+.prenatal-status-select {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f0fdf4;
+    color: #166534;
+    cursor: pointer;
+}
+
+
+/* CONFIRMATION MODAL */
+
+.prenatal-confirm-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.prenatal-confirm-modal h2 {
+    color: #173b57;
+    margin-bottom: 15px;
+}
+
+.prenatal-confirm-modal p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .prenatal-filter-section {
+        flex-direction: column;
+    }
+    .prenatal-filter-section input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .prenatal-confirm-modal {
+        padding: 20px;
+    }
+}
+
+.prenatal-modal {
+    width: min(650px, 95vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+}
+
+.prenatal-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.prenatal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.prenatal-field.full,
+.prenatal-form-actions {
+    grid-column: 1 / -1;
+}
+
+.prenatal-field input,
+.prenatal-field select,
+.prenatal-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #cbdff0;
+    border-radius: 8px;
+    background: #f8fcff;
+}
+
+.prenatal-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 550px) {
+    .prenatal-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
