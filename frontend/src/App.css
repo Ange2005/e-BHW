@@ -1,0 +1,102 @@
+.app-container {
+    min-height: 100vh;
+    background: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.app-header {
+    background: linear-gradient(120deg, #075b9a, #1599dc, #71cbf3);
+    padding: 22px 35px 0;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 90, 160, 0.18);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.header-logo {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header-text h1 {
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header-text p {
+    margin: 7px 0 0;
+    color: #e1f5ff;
+    font-size: 14px;
+}
+
+.app-navigation {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-button {
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.13);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px 12px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-button.active {
+    background: #f0f8ff;
+    color: #086ca9;
+    border-color: #f0f8ff;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.app-main {
+    min-height: 75vh;
+}
+
+@media (max-width: 600px) {
+    .app-header {
+        padding: 18px 15px 0;
+    }
+    .header-text h1 {
+        font-size: 18px;
+    }
+    .header-text p {
+        font-size: 12px;
+    }
+    .header-logo {
+        width: 42px;
+        height: 42px;
+        font-size: 25px;
+    }
+    .app-navigation {
+        gap: 6px;
+    }
+    .nav-button {
+        flex: 1;
+        padding: 13px 8px;
+        font-size: 12px;
+    }
+}
